@@ -7,8 +7,8 @@ def matrix_transpose(A: list) -> np.ndarray:
     # Write code here
     A=np.array(A)
     row,col=A.shape
-    output=np.empty((col,row),dtype=int)
+    output=np.empty((col,row),dtype=A.dtype)
     for i in range(row):
         for j in range(col):
-            output[j][i]=A[i][j]
+            output[j,i]=A[i,j]
     return output
